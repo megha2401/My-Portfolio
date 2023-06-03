@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:black;
+    font-family: sans-serif;
+}
+.section
+{
+    padding: 100px;
+}
+.section_title{
+text-align: center;
+font-size: var(--h1-font-size);
+margin-bottom:var(--mb-3);
+padding-bottom: 50px;
+
+}
+.section_title::before
+{
+    content:attr(data-heading);
+    display:block;
+    font-size:larger;
+    font-weight:bolder;
+    color: rgb(184, 9, 67);
+
+}
+.navbar{
+position:fixed;
+background-color: #333;
+width:180px;
+height:100%;
+border-right: 2px solid;
+transition: transform 0.3s ease-in;
+z-index: 999;
+}
+.nav_logo{
+    position: absolute;
+    margin-left:69px;
+    margin-right:0;
+    top: 0.9rem;
+    width: 38px;
+    height:45px;
+    cursor: pointer;
+    border-radius:20px;
+    background-color:orangered;
+
+}
+.nav_logo-text{
+text-decoration: none;
+padding-left: 5px;
+padding-bottom:3px;
+font-size: 2rem;
+color:white;
+font-weight: var(--font-bold);
+line-height: 50px
+}
+
+ul {
+    position:absolute;
+    transform: rotate(-90deg) translateX(-100%);
+    transition: transform 0.2s;
+    transform-origin: left top;
+    display: flex;
+    flex-direction: row-reverse;
+    margin:60px auto 0px 28px;
+}
+ul li{
+    display:flex;
+}
+ul li a{
+    float: right;
+    position: relative;
+    height:100%;
+    text-decoration: none;
+    color: wheat;
+    font-weight:700;
+    line-height: 100px;
+    padding: 15px ;
+    transition: .4s;
+}
+ul li a:hover{
+    color: deeppink;
+}
+ul li a:active{
+    color:deeppink;
+}
+ul li a:hover::after{
+    position: absolute;
+    content:'';
+    width:6px;
+    height: 4px;
+    background-color: deeppink;
+    border-radius: 50%;
+    bottom:4rem;
+    left:0;
+    right:0;
+    bottom:70px;
+    margin: auto;
+
+}
+.navbargo{
+    position:absolute;
+    transform: translate(-530px,0px);
+
+}
+
+.ham{
+    position: absolute;
+    left:15px;
+    top:0.5rem;
+    font-size:35px;
+    cursor: pointer;
+    color:crimson;
+  }
+ 
+  .cross{
+    position:fixed;
+    top: 1px;
+    font-size:28px;
+    margin-left:30px;
+    color:crimson;
+    z-index: 999;
+  }
+
+
+
+
+.main{
+    margin-left:90px;
+}
+
+
+
+.info h1{
+    font-size: 65px;
+    color:greenyellow;
+}
+.info h2{
+    padding-top: 10%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color:whitesmoke;
+}
+ h3{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color:whitesmoke;
+}
+.info span{
+    color: rgb(248, 77, 106);
+
+}
+.grid{
+    display:grid;
+}
+@media (max-width:1020px){
+ .image{
+   display: none;
+}
+}
+.image
+    {
+        width:30px;
+        height:60%;
+        position:absolute;
+        right:10%;
+        bottom:0;
+        top: 50px;  
+      }
+.image img{
+        position: absolute;
+        height:110%;
+        transform: translate(-55%);
+        left: 30%;
+        transition :left 2s ease;
+        bottom: 0;
+    }
+.image:hover .girl{
+        left:55%;
+    }
+
+
+.button{
+    text-decoration: none;
+    cursor: pointer;
+    color:black;
+    background-color:purple;
+    margin: 26px 0;
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: .4s es;
+}
+.button:hover{
+    background: whitesmoke;
+    }
+
+.icons{
+        text-decoration: none;
+        color:darkblue;
+
+    }
+ div.icons{
+        color:darkblue;
+        font-size: 40px;
+        transition: .4s ease;
+     } 
+i:hover{
+        color: white;
+        cursor: pointer;
+    }
+    .about.quali.skills.contacts.home
+    {
+        padding:25px 50px 60px 120px;
+    }
+
+.about_description{
+    color:darkgrey;
+}    
+.about_subtitle{
+    color:deeppink;
+}
+   
+.quali_title{
+    color:deeppink;
+    font-size: larger;
+}
+.timeline{
+    padding-top:1rem;
+}
+.e_icon{
+    padding-right: 0.5rem;
+    padding-left: 0;;
+}
+.timeline_des{
+    color:darkgrey;
+}
+.timeline_date{
+    color:dodgerblue;
+}
+.skills_title{
+    color:white;
+
+}
+.contact_subtitle{
+    color:deeppink;
+}
+ .contact_content{
+    padding-top:4rem;
+ }
+ .form_heading
+ {
+    font-size:20px;
+    color:crimson;
+    padding-bottom: 2rem;
+ }
+ .input_container
+ {
+    position:relative;
+    margin-top:.1rem;
+    margin-bottom: 1.9rem;
+
+ }
+ input{
+    border:2px solid ;
+    padding:.6rem 2.5rem;
+    background-color: transparent;
+    color:white;
+    border-radius: .50rem;
+    transition: .3s;
+ }
+ 
+ textarea.input{
+    padding:.8rem 1.2rem;
+    min-height:140px;
+    border-radius: .50rem;
+    resize:none;
+
+ }
+ .input_container label{
+    position :absolute;
+    color:wheat;
+    font-weight: bold;
+    bottom: 100%;
+ }
+ .form_button{
+    position: relative;
+    padding-top:0;
+    bottom: 50px;
+ }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
