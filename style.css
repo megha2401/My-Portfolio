@@ -300,5 +300,10 @@ i:hover{
         background-color: #333;
         color: #fff;
         padding: 20px;
+        position:relative;
+        width: 110vw;
+        left:0;
+        right:0;
+        bottom:0;
         text-align: center;
       }
